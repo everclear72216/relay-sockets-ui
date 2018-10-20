@@ -1,0 +1,11 @@
+
+.login-content {
+    height: 100%;
+}
+
+div.login-content mat-icon.mat-icon {
+    width: 40px;
+    height: 40px;
+
+    font-size: 40px;
+}

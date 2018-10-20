@@ -1,0 +1,23 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-toolbar color="primary">
+        <button
+            type="button"
+            mat-icon-button
+            (click)="drawer.toggle()"
+            *ngIf="(isHandset$ | async)">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </mat-toolbar>
+    <mat-sidenav
+        #drawer
+        class="sidenav"
+        fixedInViewport="true"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="false">
+        <mat-toolbar color="primary">Menu</mat-toolbar>
+        <mat-nav-list>
+        </mat-nav-list>
+    </mat-sidenav>
+    <ng-content></ng-content>
+</mat-sidenav-container>
